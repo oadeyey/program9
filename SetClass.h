@@ -107,6 +107,15 @@ bool SetClass::remove(int elementToRemove) {
         }
     }
 } // End of remove() Method
-
+SetClass operator+(SetClass b){
+		SetClass a;
+		for (int i = 0; i < 51; i++) {
+			if(set[i]==true||b.isElement(i)){
+				a.add(i);
+			}
+		}
+    
+		return(a);
+	}
 
 /*** End definitions for SetClass class ***/
