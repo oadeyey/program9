@@ -93,7 +93,27 @@ int main() {
         cout << endl;
     }
     
+    currentUserInputB = 0; // Changed for Remove Capability Down Below
+    
     /*** Printing A & B Data Members ***/
+    cout << "Printing A's Data Set: " << endl;
+    printer.print(A);
+    cout << endl;
+    
+    cout << "Printing B's Data Set: " << endl;
+    printer.print(B);
+    cout << endl;
+    
+    /*** Read Set of Numbers to Remove From B ***/
+    while (currentUserInputB != -1) {
+        cout << "Enter Integers to Remove From Set B [-1 to Quit]: ";
+        cin >> currentUserInputB;
+        B.remove(currentUserInputB);
+        
+        
+        cout << endl;
+    }
+    
     cout << "Printing A's Data Set: " << endl;
     printer.print(A);
     cout << endl;
