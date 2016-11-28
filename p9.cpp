@@ -129,7 +129,7 @@ int main() {
     
     /*** Case C = -B ***/
     
-    /*** Check Seet A, B, C For currentUserInputCheck ***/
+    /*** Check Set A, B, C For currentUserInputCheck ***/
     cout << "Enter an Integer to see if it is in Sets A, B, or C: ";
     cin >> currentUserInputCheck;
     cout << endl;

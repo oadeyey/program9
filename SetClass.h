@@ -73,7 +73,7 @@ bool SetClass::add(int elementToAdd) {
         // Reached A Comprehensible Stage
         
         if (set[elementToAdd] == true) {
-            cout << elementToAdd << " is already a member." << endl;
+            cout << "ERROR MESSAGE: " << elementToAdd << " is already a member." << endl;
             return false;
         } else {
             set[elementToAdd] = true;
@@ -90,16 +90,16 @@ bool SetClass::remove(int elementToRemove) {
      */
     
     if (elementToRemove < 0) {
-        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        cout << "ERROR MESSAGE: Integer Out of Bounds ~0 -- 50~" << endl;
         return false;
     } else if (elementToRemove > 50) {
-        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        cout << "ERROR MESSAGE: Integer Out of Bounds ~0 -- 50~" << endl;
         return false;
     } else {
         // Reached A Comprehensible Stage
         
         if (set[elementToRemove] == false) {
-            cout << elementToRemove << " is not a member." << endl;
+            cout << "ERROR MESSAGE: " << elementToRemove << " is not a member." << endl;
             return false;
         } else {
             set[elementToRemove] = false;
