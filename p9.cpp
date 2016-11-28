@@ -28,16 +28,26 @@ class Print {
     
     public:
         void print(SetClass a);
+    private:
+        int count;
 };
 
 void Print::print(SetClass classToPrint) {
+    count = 0;
     
     for (int i = 0; i < 51; ++ i) {
         if (classToPrint.isElement(i) == true) {
             cout << i << " == true" << endl;
+            count += 1;
         } else {
             // Do Nothing
         }
+    }
+    
+    if (count == 0) {
+        cout << "Set is empty" << endl;
+    } else {
+        count = 0;
     }
     
 } // End of print() Method
@@ -52,10 +62,20 @@ int main() {
     Print printer; // friend class of SetClass
     int currentUserInputA;
     
-    cout << "Enter Integers to Fill Set A [-1 to Quit]: ";
+    /*** Implement Printing of Sets A, B, & C ***/
+    printer.print(A);
+    printer.print(B);
+    printer.print(C);
     
-    cout << endl;
     
+    while (currentUserInputA != -1) {
+        cout << "Enter Integers to Fill Set A [-1 to Quit]: ";
+        cin >> currentUserInputA;
+        
+        
+        
+        cout << endl;
+    }
     
     return 0;
 }
