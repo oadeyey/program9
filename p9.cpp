@@ -50,6 +50,12 @@ int main() {
     SetClass B;
     SetClass C;
     Print printer; // friend class of SetClass
+    int currentUserInputA;
+    
+    cout << "Enter Integers to Fill Set A [-1 to Quit]: ";
+    
+    cout << endl;
+    
     
     return 0;
 }
