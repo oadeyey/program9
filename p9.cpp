@@ -136,12 +136,20 @@ int main() {
     
     if (A.isElement(currentUserInputCheck) == true) {
         cout << "Found in Set A!" << endl;
-    } else if (B.isElement(currentUserInputCheck) == true) {
+    } else {
+        cout << currentUserInputCheck << " does not exist in A!" << endl;
+    }
+    
+    if (B.isElement(currentUserInputCheck) == true) {
         cout << "Found in Set B!" << endl;
-    } else if (C.isElement(currentUserInputCheck) == true) {
+    } else {
+        cout << currentUserInputCheck << " does not exist in B!" << endl;
+    }
+    
+    if (C.isElement(currentUserInputCheck) == true) {
         cout << "Found in Set C!" << endl;
     } else {
-        cout << currentUserInputCheck << " does not exist in A, B, or C!" << endl;
+        cout << currentUserInputCheck << " does not exist in C!" << endl;
     }
     
     return 0;

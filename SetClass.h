@@ -64,10 +64,10 @@ bool SetClass::add(int elementToAdd) {
     int currentElement = elementToAdd;
     
     if (elementToAdd < 0) {
-        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        cout << "ERROR MESSAGE: Integer Out of Bounds ~0 -- 50~" << endl;
         return false;
     } else if (elementToAdd > 50) {
-        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        cout << "ERROR MESSAGE: Integer Out of Bounds ~0 -- 50~" << endl;
         return false;
     } else {
         // Reached A Comprehensible Stage
