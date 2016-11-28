@@ -46,12 +46,10 @@ void Print::print(SetClass classToPrint) {
 
 int main() {
     
-    SetClass setClassTest; // Creates SetClass Object
-    Print printer;
+    SetClass A;
+    SetClass B;
+    SetClass C;
+    Print printer; // friend class of SetClass
     
-    setClassTest.add(4);
-    setClassTest.add(9);
-    setClassTest.isElement(4);
-    printer.print(setClassTest);
     return 0;
 }
