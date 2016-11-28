@@ -62,6 +62,7 @@ int main() {
     Print printer; // friend class of SetClass
     int currentUserInputA;
     int currentUserInputB;
+    int currentUserInputCheck;
     
     /*** Implement Printing of Sets A, B, & C ***/
     cout << "A ";
@@ -127,6 +128,21 @@ int main() {
     /*** Case C = A * B ***/
     
     /*** Case C = -B ***/
+    
+    /*** Check Seet A, B, C For currentUserInputCheck ***/
+    cout << "Enter an Integer to see if it is in Sets A, B, or C: ";
+    cin >> currentUserInputCheck;
+    cout << endl;
+    
+    if (A.isElement(currentUserInputCheck) == true) {
+        cout << "Found in Set A!" << endl;
+    } else if (B.isElement(currentUserInputCheck) == true) {
+        cout << "Found in Set B!" << endl;
+    } else if (C.isElement(currentUserInputCheck) == true) {
+        cout << "Found in Set C!" << endl;
+    } else {
+        cout << currentUserInputCheck << " does not exist in A, B, or C!" << endl;
+    }
     
     return 0;
 }
