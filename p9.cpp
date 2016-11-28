@@ -84,8 +84,6 @@ int main() {
         cout << endl;
     }
     
-    printer.print(A);
-    
     while (currentUserInputB != -1) {
         cout << "Enter Integers to Fill Set B [-1 to Quit]: ";
         cin >> currentUserInputB;
@@ -95,7 +93,14 @@ int main() {
         cout << endl;
     }
     
+    /*** Printing A & B Data Members ***/
+    cout << "Printing A's Data Set: " << endl;
+    printer.print(A);
+    cout << endl;
+    
+    cout << "Printing B's Data Set: " << endl;
     printer.print(B);
+    cout << endl;
     
     return 0;
 }
