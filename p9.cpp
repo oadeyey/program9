@@ -61,21 +61,41 @@ int main() {
     SetClass C;
     Print printer; // friend class of SetClass
     int currentUserInputA;
+    int currentUserInputB;
     
     /*** Implement Printing of Sets A, B, & C ***/
+    cout << "A ";
     printer.print(A);
+    cout << endl;
+    cout << "B ";
     printer.print(B);
+    cout << endl;
+    cout << "C ";
     printer.print(C);
+    cout << endl;
     
     
     while (currentUserInputA != -1) {
         cout << "Enter Integers to Fill Set A [-1 to Quit]: ";
         cin >> currentUserInputA;
-        
+        A.add(currentUserInputA);
         
         
         cout << endl;
     }
+    
+    printer.print(A);
+    
+    while (currentUserInputB != -1) {
+        cout << "Enter Integers to Fill Set B [-1 to Quit]: ";
+        cin >> currentUserInputB;
+        B.add(currentUserInputB);
+        
+        
+        cout << endl;
+    }
+    
+    printer.print(B);
     
     return 0;
 }
