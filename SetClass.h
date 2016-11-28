@@ -8,9 +8,9 @@ using namespace std;
 class SetClass {
     public:
         bool isEmpty(int x);
-        bool isElement();
+        bool isElement(int x);
         bool add(int x);
-        bool remove();
+        bool remove(int x);
         SetClass(); // Default constructor
     
     private:
@@ -41,13 +41,17 @@ bool SetClass::isEmpty(int checkForTrue) {
     
 } // End of isEmpty() Method
 
-bool SetClass::isElement() {
+bool SetClass::isElement(int isElementTest) {
     
     /**
          returns true if x is a member of the set, false otherwise
      */
     
-    return true;
+    if (set[isElementTest] == true) {
+        return true;
+    } else {
+        return false;
+    }
 } // End of isElement() Method
 
 bool SetClass::add(int elementToAdd) {
@@ -61,30 +65,47 @@ bool SetClass::add(int elementToAdd) {
     
     if (elementToAdd < 0) {
         cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        return false;
     } else if (elementToAdd > 50) {
         cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        return false;
     } else {
         // Reached A Comprehensible Stage
         
         if (set[elementToAdd] == true) {
             cout << elementToAdd << " is already a member." << endl;
+            return false;
         } else {
             set[elementToAdd] = true;
+            return true;
         }
     }
-    
-    
-    return true;
 } // End of add() Method
 
-bool SetClass::remove() {
+bool SetClass::remove(int elementToRemove) {
     
     /**
          removes x from the set. If x was in the set (before removal), return
          true indicating the removal is successful, otherwise return false
      */
     
-    return true;
+    if (elementToRemove < 0) {
+        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        return false;
+    } else if (elementToRemove > 50) {
+        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+        return false;
+    } else {
+        // Reached A Comprehensible Stage
+        
+        if (set[elementToRemove] == false) {
+            cout << elementToRemove << " is not a member." << endl;
+            return false;
+        } else {
+            set[elementToRemove] = false;
+            return true;
+        }
+    }
 } // End of remove() Method
 
 

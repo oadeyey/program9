@@ -21,12 +21,37 @@
 
 using namespace std;
 
+/*** Print class definition ***/
+
+class Print {
+    friend class SetClass;
+    
+    public:
+        void print(SetClass a);
+};
+
+void Print::print(SetClass classToPrint) {
+    
+    for (int i = 0; i < 51; ++ i) {
+        if (classToPrint.isElement(i) == true) {
+            cout << i << " == true" << endl;
+        } else {
+            // Do Nothing
+        }
+    }
+    
+} // End of print() Method
+
+/*** End definitions for Print class ***/
+
 int main() {
     
     SetClass setClassTest; // Creates SetClass Object
+    Print printer;
     
-    
-    
-    cout << "Hello, World!" << endl;
+    setClassTest.add(4);
+    setClassTest.add(9);
+    setClassTest.isElement(4);
+    printer.print(setClassTest);
     return 0;
 }
