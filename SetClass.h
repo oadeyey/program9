@@ -1,0 +1,91 @@
+#include <iostream>
+
+using namespace std;
+
+/*** SetClass class definition ***/
+
+
+class SetClass {
+    public:
+        bool isEmpty(int x);
+        bool isElement();
+        bool add(int x);
+        bool remove();
+        SetClass(); // Default constructor
+    
+    private:
+        bool set[51];
+};
+
+/*** SetClass Default Constructor ***/
+SetClass::SetClass() {
+    
+    for (int i = 0; i < 51; ++i) {
+        set[i] = false;
+    }
+    
+    return;
+}
+
+bool SetClass::isEmpty(int checkForTrue) {
+    
+    /**
+         returns true if the Set is empty, false otherwise
+     */
+    
+    if (set[checkForTrue] == true) {
+        return true;
+    } else {
+        return false;
+    }
+    
+} // End of isEmpty() Method
+
+bool SetClass::isElement() {
+    
+    /**
+         returns true if x is a member of the set, false otherwise
+     */
+    
+    return true;
+} // End of isElement() Method
+
+bool SetClass::add(int elementToAdd) {
+    
+    /**
+         adds x to the set. If x is already a member or out of range, return
+         false, otherwise return true.
+     */
+    
+    int currentElement = elementToAdd;
+    
+    if (elementToAdd < 0) {
+        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+    } else if (elementToAdd > 50) {
+        cout << "Sorry Friend, I cannot comprehend what you want me to do!" << endl;
+    } else {
+        // Reached A Comprehensible Stage
+        
+        if (set[elementToAdd] == true) {
+            cout << elementToAdd << " is already a member." << endl;
+        } else {
+            set[elementToAdd] = true;
+        }
+    }
+    
+    
+    return true;
+} // End of add() Method
+
+bool SetClass::remove() {
+    
+    /**
+         removes x from the set. If x was in the set (before removal), return
+         true indicating the removal is successful, otherwise return false
+     */
+    
+    return true;
+} // End of remove() Method
+
+
+/*** End definitions for SetClass class ***/
