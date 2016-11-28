@@ -5,7 +5,7 @@
  * 2016 Fall Semester                                                                                 *
  * Assignment: program9                                                                               *
  * Due date: November 28, 2016                                                                        *
- * Date submitted: /uk                                                                                *
+ * Date submitted: November 28, 2016                                                                  *
  * Instructor: Richard Churchill                                                                      *
  *                                                                                                    *
  *  Build Instructions:                                                                               *
@@ -121,6 +121,12 @@ int main() {
     cout << "Printing B's Data Set: " << endl;
     printer.print(B);
     cout << endl;
+    
+    /*** Case C = A + B ***/
+    
+    /*** Case C = A * B ***/
+    
+    /*** Case C = -B ***/
     
     return 0;
 }
